@@ -50,6 +50,7 @@ if ingredients_list:
 
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         st.subheader(fruit_chosen + ' Nutrition Information')
+        st.write(search_on)
         fruityvice_response = requests.get('https://fruityvice.com/apu/fruit/' + search_on)
         st.write(fruityvice_response)
         st.stop()
